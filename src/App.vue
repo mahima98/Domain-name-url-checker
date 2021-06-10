@@ -37,13 +37,16 @@ export default {
     onDisplayInputUrl() {
       this.customInputURL = this.customUrl
 
+      //get main domain name from url
       this.get_domain_from_url(this.mainDomainURL)
       this.mainUrl = this.domainUrl;
       console.log('mainUrl', this.mainUrl)
 
+      //get custom domain name from url
       this.get_domain_from_url(this.customInputURL)
       this.customUrl = this.domainUrl;
 
+      //comparing
       if( this.mainUrl == this.customUrl) {
           this.outputResult = "Two Domain have the same name"
       }else {
